@@ -14,10 +14,10 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: true
-        default: 'true'
+        required: false
+        default: 'false'
   schedule:
-    - cron: 30 13 * * 4 
+    - cron: 30 1 */5 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
@@ -26,7 +26,7 @@ env:
   CONFIG_FILE: 5.4.config
   DIY_P1_SH: diy5.4.sh
   DIY_P2_SH: diy-part2.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
