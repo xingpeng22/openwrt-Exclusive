@@ -14,10 +14,10 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: true
-        default: 'true'
+        required: false
+        default: 'false'
   schedule:
-    - cron: 30 13 * * 4
+    - cron: 30 13 */5 * *
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
